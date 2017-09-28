@@ -179,6 +179,17 @@ public final class PayloadBuilder {
     }
 
     /**
+     * Sets the mutable-content flag to enabled for iOS10+
+     * notification extensions
+     *
+     * @return this
+     */
+    public PayloadBuilder mutableContent() {
+        aps.put("mutable-content", 1);
+        return this;
+    }
+
+    /**
      * Sets the notification badge to be displayed next to the
      * application icon.
      *
